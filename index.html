@@ -30,16 +30,17 @@
 
                     
 
-                    for (let i = 0; i < 2; i++) {
+                    for (let i = 0; i < resposta.length; i++) {
 
-                        const div = document.createElement("div");
+                        const div = document.createElement("ul");
 
-                        
+
                         const produto = `
-                        <p>ID: ${resposta.id}</p>
-                        <p>Descrição: ${resposta.descricao}</p>
-                        <p>Preço: ${resposta.preco}</p>`
+                        <li>ID: ${resposta.id}</li>
+                        <li>Descrição: ${resposta.descricao}</li>
+                        <li>Preço: ${resposta.preco}</li>`
 
+                        document.querySelector('#resposta').removeChild()
                         document.querySelector('#resposta').appendChild(div).innerHTML = produto;
 
                     }
